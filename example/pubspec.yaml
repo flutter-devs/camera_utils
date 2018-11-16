@@ -1,0 +1,33 @@
+name: flutter_camera_plugin_example
+description: Demonstrates how to use the flutter_camera_plugin plugin.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  video_player: ^0.7.2
+  path: ^1.6.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_camera_plugin:
+    path: ../
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/ic_flutter_devs_logo.png
+    - assets/images/ic_no_image.png
+    - assets/images/ic_play.png
+
