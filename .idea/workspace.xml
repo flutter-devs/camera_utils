@@ -74,7 +74,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="95" />
-    <option name="y" value="312" />
+    <option name="y" value="112" />
     <option name="width" value="1522" />
     <option name="height" value="883" />
   </component>
@@ -125,27 +125,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -169,9 +151,15 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">

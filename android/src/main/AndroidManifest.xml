@@ -1,25 +1,3 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.successive.adhoc.fluttercameraplugin">
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-
-    <application>
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.flutter.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
-        </provider>
-    </application>
-
+  package="com.aeologic.camerautils">
 </manifest>

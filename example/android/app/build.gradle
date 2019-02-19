@@ -33,7 +33,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.successive.adhoc.fluttercamerapluginexample"
+        applicationId "com.aeologic.camerautilsexample"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode flutterVersionCode.toInteger()
@@ -58,5 +58,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
 }

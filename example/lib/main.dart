@@ -1,8 +1,12 @@
+import 'package:flutter/material.dart';
 import 'dart:async';
+
+import 'package:flutter/services.dart';
+import 'package:camera_utils/camera_utils.dart';
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_camera_plugin/flutter_camera_plugin.dart';
 import 'package:video_player/video_player.dart';
 
 void main() => runApp(
@@ -145,7 +149,7 @@ class _MyAppState extends State<MyApp> {
                       onTap: () {
                         Navigator.of(context).push(new MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                new VideoSplashScreen(_path)));
+                                new VideoPlayerScreen(_path)));
                       },
                       child: new Image.asset(
                         _assetPlayImagePath,
@@ -299,7 +303,7 @@ class _MyAppState extends State<MyApp> {
   }*/
 
   Future _captureImage() async {
-    final path = await FlutterCameraPlugin.captureImage;
+    final path = await CameraUtils.captureImage;
     if (path != null) {
       setState(() {
         _path = path;
@@ -309,8 +313,9 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future _pickImage() async {
-    final tempPath = await FlutterCameraPlugin.pickImage;
-    final path = await FlutterCameraPlugin.writeTextToImage(tempPath, "hasgkjhfgajkghjkgf");
+    final tempPath = await CameraUtils.pickImage;
+    final path =
+        await CameraUtils.writeTextToImage(tempPath, "hasgkjhfgajkghjkgf");
     if (path != null) {
       setState(() {
         _path = path;
@@ -320,8 +325,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future _captureVideo() async {
-    final path = await FlutterCameraPlugin.captureVideo;
-    final name = await FlutterCameraPlugin.getFileName(path);
+    final path = await CameraUtils.captureVideo;
+    final name = await CameraUtils.getFileName(path);
     if (path != null) {
       setState(() {
         _path = path;
@@ -341,22 +346,22 @@ class _MyAppState extends State<MyApp> {
     });
 
     final path = isCapture
-        ? await FlutterCameraPlugin.captureVideo
-        : await FlutterCameraPlugin.pickVideo;
+        ? await CameraUtils.captureVideo
+        : await CameraUtils.pickVideo;
 
     if (path != null) {
       setState(() {
         _path = path;
         _isVideo = true;
       });
-      Future<String> name = FlutterCameraPlugin.getFileName(path);
+      Future<String> name = CameraUtils.getFileName(path);
       name.then((fileName) {
         setState(() {
           _videoName = fileName;
           print(fileName);
         });
       });
-      Future<String> thumbPath = FlutterCameraPlugin.getThumbnail(path);
+      Future<String> thumbPath = CameraUtils.getThumbnail(path);
       thumbPath.then((path) {
         setState(() {
           _thumbPath = path;
@@ -367,23 +372,23 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class VideoSplashScreen extends StatefulWidget {
+class VideoPlayerScreen extends StatefulWidget {
   String path;
 
-  VideoSplashScreen(this.path);
+  VideoPlayerScreen(this.path);
 
   @override
-  _VideoSplashScreenState createState() => _VideoSplashScreenState(path);
+  _VideoPlayerScreenState createState() => _VideoPlayerScreenState(path);
 }
 
-class _VideoSplashScreenState extends State<VideoSplashScreen> {
+class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   VideoPlayerController playerController;
   VoidCallback listener;
   String path;
 
   BuildContext context;
 
-  _VideoSplashScreenState(this.path);
+  _VideoPlayerScreenState(this.path);
 
   @override
   @override
@@ -391,7 +396,7 @@ class _VideoSplashScreenState extends State<VideoSplashScreen> {
     super.initState();
 
     listener = () {
-      setState(() {});
+      //setState(() {});
     };
     initializeVideo();
     playerController.play();
@@ -401,7 +406,7 @@ class _VideoSplashScreenState extends State<VideoSplashScreen> {
     playerController = VideoPlayerController.file(File(path))
       ..addListener(listener)
       ..setVolume(1.0)
-     ..initialize()
+      ..initialize()
       ..play();
   }
 
@@ -416,7 +421,6 @@ class _VideoSplashScreenState extends State<VideoSplashScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     if (playerController != null) playerController.dispose();
     super.dispose();
   }

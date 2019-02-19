@@ -1,4 +1,4 @@
-package com.successive.adhoc.fluttercamerapluginexample;
+package com.aeologic.camerautilsexample;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

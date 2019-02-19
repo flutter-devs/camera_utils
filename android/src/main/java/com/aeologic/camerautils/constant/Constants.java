@@ -1,4 +1,4 @@
-package com.successive.adhoc.fluttercameraplugin.constant;
+package com.aeologic.camerautils.constant;
 
 public class Constants {
     public static final String ROOT_PATH="CAMERA_PLUGIN";

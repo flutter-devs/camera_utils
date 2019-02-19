@@ -1,4 +1,4 @@
-package com.successive.adhoc.fluttercameraplugin.util;
+package com.aeologic.camerautils.util;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -7,18 +7,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.os.Environment;
-import android.renderscript.ScriptC;
-import android.text.Layout;
-import android.text.StaticLayout;
-import android.text.TextPaint;
 import android.util.Log;
-import android.widget.TextView;
 
-import com.successive.adhoc.fluttercameraplugin.constant.Constants;
+
+import com.aeologic.camerautils.constant.Constants;
 
 import java.io.File;
 import java.io.FileNotFoundException;
