@@ -41,5 +41,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>${PRODUCT_NAME} uses your camera to capture image.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>${PRODUCT_NAME} need access of photo library</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>${PRODUCT_NAME} Need microphone access for uploading videos.</string>
 </dict>
 </plist>

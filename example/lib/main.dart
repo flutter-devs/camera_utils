@@ -26,10 +26,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _assetVideoPath = 'assets/videos/aeologic_logo.mp4';
   String _path = null;
   String _thumbPath = null;
-  String _videoPath = null;
   double _headerHeight = 320.0;
   final String _assetImagePath = 'assets/images/ic_no_image.png';
   final String _assetPlayImagePath = 'assets/images/ic_play.png';
@@ -49,7 +47,6 @@ class _MyAppState extends State<MyApp> {
           _path != null
               ? _isVideo ? _getVideoContainer() : _getImageFromFile()
               : _getImageFromAsset(),
-          //_getCameraFab(),
           _getContentContainerLogo(),
         ],
       ),
@@ -95,7 +92,6 @@ class _MyAppState extends State<MyApp> {
                   children: <Widget>[
                     new Image.asset(
                       _assetImagePath,
-                      //fit: BoxFit.fill,
                       width: 48.0,
                       height: 32.0,
                     ),
@@ -176,13 +172,6 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  _playVideo(BuildContext context) {
-    /* Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => VideoSplashScreen(_path)),
-    );*/
-  }
-
   Widget _buildPathWidget() {
     return _path != null
         ? new Align(
@@ -210,8 +199,6 @@ class _MyAppState extends State<MyApp> {
             new Container(
               color: Colors.red,
               padding: EdgeInsets.all(10.0),
-
-              //color: Colors.blue,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -271,37 +258,6 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  Widget _getLogo() {
-    return Container(
-      margin: EdgeInsets.only(top: 200.0),
-      alignment: Alignment.center,
-      child: Center(
-        child: Image.asset(
-          _assetLogoImagePath,
-          width: 160.0,
-          height: 160.0,
-          fit: BoxFit.contain,
-        ),
-      ),
-    );
-  }
-
-  /* Future _playVideo() async {
-    */ /*final videoPath = await Navigator.of(context).pushNamed(CAMERA_SCREEN);
-
-
-    if (mounted) {
-      setState(() {
-        _videoPath = videoPath;
-        _controller = VideoPlayerController.file(File(_videoPath))
-          ..addListener(listener)
-          ..setVolume(1.0)
-          ..initialize()
-          ..setLooping(true)
-          ..play();
-      });*/ /*
-  }*/
-
   Future _captureImage() async {
     final path = await CameraUtils.captureImage;
     if (path != null) {
@@ -313,26 +269,11 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future _pickImage() async {
-    final tempPath = await CameraUtils.pickImage;
-    final path =
-        await CameraUtils.writeTextToImage(tempPath, "hasgkjhfgajkghjkgf");
+    final path = await CameraUtils.pickImage;
     if (path != null) {
       setState(() {
         _path = path;
         _isVideo = false;
-      });
-    }
-  }
-
-  Future _captureVideo() async {
-    final path = await CameraUtils.captureVideo;
-    final name = await CameraUtils.getFileName(path);
-    if (path != null) {
-      setState(() {
-        _path = path;
-        _isVideo = true;
-
-        _videoName = name;
       });
     }
   }
