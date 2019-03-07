@@ -6,6 +6,8 @@ authors:
 - Virander <virander@aeologic.com>
 homepage: https://www.flutterdevs.com
 documentation: https://pub.dartlang.org/documentation/camera_utils
+repository: https://github.com/flutter-devs/camera_utils
+issue_tracker: https://github.com/flutter-devs/camera_utils/issues
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
