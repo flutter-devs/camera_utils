@@ -8,7 +8,7 @@ For help getting started with Flutter, view our online
 
 # camera_utils
 
-Flutter plugin for capturing and picking images and videos on the Android &amp; iOS devices.
+Flutter plugin for capturing and picking image and videos and getting thumbnail from videos on the Android & iOS devices.
 
 ### Implementation in Flutter
 
