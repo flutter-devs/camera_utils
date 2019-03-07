@@ -156,7 +156,7 @@ class _MyAppState extends State<MyApp> {
                     new Container(
                       margin: EdgeInsets.only(top: 2.0),
                       child: Text(
-                        _videoName != null ? _videoName : "",
+                        _videoName != null ? _videoName : '',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16.0,
@@ -182,7 +182,7 @@ class _MyAppState extends State<MyApp> {
               padding: EdgeInsets.all(20.0),
               color: Color.fromRGBO(00, 00, 00, 0.7),
               child: Text(
-                "PATH: $_path",
+                'PATH: $_path',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -336,9 +336,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   void initState() {
     super.initState();
 
-    listener = () {
-      //setState(() {});
-    };
+    listener = () {};
     initializeVideo();
     playerController.play();
   }

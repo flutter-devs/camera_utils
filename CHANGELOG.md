@@ -1,3 +1,7 @@
-## 0.0.1
+## 0.1.1
 
-* TODO: Describe initial release.
+* Moved to Flutter stable channel
+
+## 0.1.0
+
+* Initial Release

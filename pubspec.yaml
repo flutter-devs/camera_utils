@@ -1,8 +1,11 @@
 name: camera_utils
-description: A new Flutter Camera plugin.
-version: 0.0.1
-author:
-homepage:
+description: Flutter plugin for capturing and picking image and videos on the Android & iOS devices.
+version: 0.1.1
+authors:
+- Deepak Nishad <deepak@aeologic.com>
+- Virander <virander@aeologic.com>
+homepage: https://www.flutterdevs.com
+documentation: https://pub.dartlang.org/documentation/camera_utils
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -16,5 +19,4 @@ flutter:
   plugin:
     androidPackage: com.aeologic.camerautils
     pluginClass: CameraUtilsPlugin
-
 
