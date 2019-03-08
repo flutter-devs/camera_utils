@@ -1,3 +1,7 @@
+## 0.1.6
+
+* README.md file updated
+
 ## 0.1.5
 
 * README.md file updated

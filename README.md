@@ -2,7 +2,7 @@ For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
 
 
-[![Pub](https://img.shields.io/badge/Pub-0.1.5-orange.svg?style=flat-square)](https://pub.dartlang.org/packages/camera_utils)
+[![Pub](https://img.shields.io/badge/Pub-0.1.7-orange.svg?style=flat-square)](https://pub.dartlang.org/packages/camera_utils)
 
 
 
@@ -19,6 +19,7 @@ Then import the package in your dart file with
 ```dart
 import 'package:camera_utils/camera_utils.dart';
 ```
+
 
 ### Usages
 
