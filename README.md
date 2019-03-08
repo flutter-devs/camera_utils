@@ -22,7 +22,7 @@ import 'package:camera_utils/camera_utils.dart';
 
 ### Screenshots
 
-<img height="480px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot1.jpg"> <img height="480px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot2.jpg"> <img height="480px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot3.jpg">
+<img height="320px" width="80px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot1.svg"> <img height="320px" width="80px"  src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot2.svg"> <img height="320px" width="80px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot3.svg">
 
 
 ### Usages
