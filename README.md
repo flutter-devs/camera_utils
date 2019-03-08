@@ -2,7 +2,7 @@ For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
 
 
-[![Pub](https://img.shields.io/badge/Pub-0.1.1-orange.svg?style=flat-square)](https://pub.dartlang.org/packages/camera_utils)
+[![Pub](https://img.shields.io/badge/Pub-0.1.4-orange.svg?style=flat-square)](https://pub.dartlang.org/packages/camera_utils)
 
 
 
@@ -20,4 +20,41 @@ Then import the package in your dart file with
 import 'package:camera_utils/camera_utils.dart';
 ```
 
+### Usages
 
+1. Capture Image
+
+    ```dart
+    // Capture image
+    final path = await CameraUtils.captureImage;
+    ```
+2. Pick Image
+
+     ```dart
+     // Pick image
+    final path = await CameraUtils.pickImage;
+    ```
+3. Capture Video
+
+    ```dart
+    // Capture video
+    final path = await CameraUtils.captureVideo;
+    ```
+4. Pick Video
+
+    ```dart
+    // Pick video
+    final path = await CameraUtils.pickVideo;
+    ```
+5. Thumbnail from Video
+
+    ```dart
+    // Pass the path and get thumbnail from video
+    Future<String> thumbPath = CameraUtils.getThumbnail(path);
+      thumbPath.then((path) {
+        setState(() {
+          _thumbPath = path;
+          print(path);
+        });
+      });
+    ```
