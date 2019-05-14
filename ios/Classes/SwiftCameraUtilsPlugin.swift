@@ -153,7 +153,7 @@ extension SwiftCameraUtilsPlugin {
 extension SwiftCameraUtilsPlugin: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     /* Image Picker Controller delegate */
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    @objc public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
         let infoDict : NSDictionary = info as NSDictionary;
@@ -184,7 +184,7 @@ extension SwiftCameraUtilsPlugin: UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil);
     }
     
-    internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil);
     }
 }
