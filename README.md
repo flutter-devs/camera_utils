@@ -2,7 +2,7 @@ For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
 
 
-[![Pub](https://img.shields.io/badge/Pub-0.1.7-orange.svg?style=flat-square)](https://pub.dartlang.org/packages/camera_utils)
+[![Pub](https://img.shields.io/badge/Pub-0.1.8-orange.svg?style=flat-square)](https://pub.dartlang.org/packages/camera_utils)
 
 
 
@@ -20,9 +20,11 @@ Then import the package in your dart file with
 import 'package:camera_utils/camera_utils.dart';
 ```
 
+
 ### Screenshots
 
 <img height="420px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot1.jpg"> <img height="420px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot2.jpg"> <img height="420px" src="https://github.com/flutter-devs/camera_utils/blob/master/assets/screenshots/screenshot3.jpg">
+
 
 
 ### Usages

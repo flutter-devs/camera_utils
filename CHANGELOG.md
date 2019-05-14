@@ -1,3 +1,7 @@
+## 0.1.8
+
+* README.md file updated
+
 ## 0.1.7
 
 * Swift code updated

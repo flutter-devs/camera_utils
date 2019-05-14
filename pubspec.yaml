@@ -1,6 +1,6 @@
 name: camera_utils
 description: Flutter plugin for capturing and picking image and videos and getting thumbnail from videos on the Android & iOS devices.
-version: 0.1.7
+version: 0.1.8
 authors:
 - Deepak Nishad <deepak@aeologic.com>
 - Virander <virander@aeologic.com>
